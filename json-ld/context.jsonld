@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcloud": "https://cloud.google.com/contact-center/ai/docs/reference/rest/v1/",
+    "Conversation": "gcloud:projects.locations.conversations",
+    "Analysis": "gcloud:projects.locations.conversations.analyses",
+    "name": "https://schema.org/name",
+    "description": "https://schema.org/description",
+    "createTime": "https://schema.org/dateCreated",
+    "updateTime": "https://schema.org/dateModified",
+    "startTime": "https://schema.org/startTime",
+    "duration": "https://schema.org/duration",
+    "agentId": "https://schema.org/identifier",
+    "languageCode": "https://schema.org/inLanguage",
+    "labels": "https://schema.org/keywords",
+    "turnCount": "https://schema.org/numberOfItems",
+    "transcript": "https://schema.org/transcript"
+  }
+}

@@ -1,0 +1,393 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Contact Center AI API
+  description: >-
+    The Contact Center AI API enables building AI-powered contact center
+    solutions with conversation profiles, participants, conversation analysis,
+    and insights for virtual and human agent interactions.
+  version: 2.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/contact-center/ai
+servers:
+  - url: https://contactcenterinsights.googleapis.com/v1
+    description: Google Cloud Contact Center AI Production
+paths:
+  /projects/{projectId}/locations/{location}/conversations:
+    get:
+      operationId: listConversations
+      summary: List conversations
+      description: Lists conversations in a project and location.
+      tags:
+        - Conversations
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Conversation'
+                  nextPageToken:
+                    type: string
+    post:
+      operationId: createConversation
+      summary: Create a conversation
+      description: Creates a new conversation resource.
+      tags:
+        - Conversations
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Conversation'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversation'
+  /projects/{projectId}/locations/{location}/conversations/{conversationId}:
+    get:
+      operationId: getConversation
+      summary: Get a conversation
+      description: Retrieves a specific conversation by ID.
+      tags:
+        - Conversations
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversation'
+    patch:
+      operationId: updateConversation
+      summary: Update a conversation
+      description: Updates a conversation resource.
+      tags:
+        - Conversations
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Conversation'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversation'
+    delete:
+      operationId: deleteConversation
+      summary: Delete a conversation
+      description: Deletes a specific conversation.
+      tags:
+        - Conversations
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses:
+    get:
+      operationId: listAnalyses
+      summary: List analyses
+      description: Lists analyses for a conversation.
+      tags:
+        - Analyses
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  analyses:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Analysis'
+    post:
+      operationId: createAnalysis
+      summary: Create an analysis
+      description: Creates an analysis for a conversation.
+      tags:
+        - Analyses
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Analysis'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+  /projects/{projectId}/locations/{location}/insightsdata:export:
+    post:
+      operationId: exportInsightsData
+      summary: Export insights data
+      description: Exports insights data to a destination.
+      tags:
+        - Insights
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                bigQueryDestination:
+                  type: object
+                  properties:
+                    dataset:
+                      type: string
+                    projectId:
+                      type: string
+                    table:
+                      type: string
+                filter:
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operation'
+components:
+  schemas:
+    Conversation:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the conversation.
+        dataSource:
+          type: object
+          properties:
+            gcsSource:
+              type: object
+              properties:
+                audioUri:
+                  type: string
+                transcriptUri:
+                  type: string
+            dialogflowSource:
+              type: object
+              properties:
+                dialogflowConversation:
+                  type: string
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        startTime:
+          type: string
+          format: date-time
+        duration:
+          type: string
+          description: Duration of the conversation in seconds.
+        turnCount:
+          type: integer
+          description: Number of turns in the conversation.
+        agentId:
+          type: string
+          description: Identifier of the agent in the conversation.
+        languageCode:
+          type: string
+          description: Language code of the conversation.
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+    Analysis:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the analysis.
+        createTime:
+          type: string
+          format: date-time
+        analysisResult:
+          type: object
+          properties:
+            callAnalysisMetadata:
+              type: object
+              properties:
+                sentiments:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      magnitude:
+                        type: number
+                      score:
+                        type: number
+                entities:
+                  type: object
+                  additionalProperties:
+                    type: object
+                intents:
+                  type: object
+                  additionalProperties:
+                    type: object
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        metadata:
+          type: object
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-cloud-contact-center-ai/refs/heads/main/json-schema/conversation.json",
+  "title": "Conversation",
+  "description": "A conversation resource in Google Cloud Contact Center AI representing an interaction between a customer and an agent.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Resource name of the conversation."
+    },
+    "dataSource": {
+      "type": "object",
+      "description": "The source of the conversation data.",
+      "properties": {
+        "gcsSource": {
+          "type": "object",
+          "properties": {
+            "audioUri": {
+              "type": "string",
+              "description": "Cloud Storage URI for the audio file."
+            },
+            "transcriptUri": {
+              "type": "string",
+              "description": "Cloud Storage URI for the transcript."
+            }
+          }
+        },
+        "dialogflowSource": {
+          "type": "object",
+          "properties": {
+            "dialogflowConversation": {
+              "type": "string",
+              "description": "Dialogflow conversation resource name."
+            }
+          }
+        }
+      }
+    },
+    "createTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the conversation was created."
+    },
+    "updateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the conversation was last updated."
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the conversation started."
+    },
+    "duration": {
+      "type": "string",
+      "description": "Duration of the conversation in seconds format."
+    },
+    "turnCount": {
+      "type": "integer",
+      "description": "Number of turns in the conversation."
+    },
+    "agentId": {
+      "type": "string",
+      "description": "Identifier of the agent in the conversation."
+    },
+    "languageCode": {
+      "type": "string",
+      "description": "Language code of the conversation."
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "User-defined labels for the conversation."
+    },
+    "transcript": {
+      "type": "object",
+      "description": "The conversation transcript.",
+      "properties": {
+        "transcriptSegments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "number"
+              },
+              "segmentParticipant": {
+                "type": "object",
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "enum": ["ROLE_UNSPECIFIED", "HUMAN_AGENT", "AUTOMATED_AGENT", "END_USER"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
