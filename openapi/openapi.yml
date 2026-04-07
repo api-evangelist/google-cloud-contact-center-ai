@@ -16,7 +16,7 @@ paths:
   /projects/{projectId}/locations/{location}/conversations:
     get:
       operationId: listConversations
-      summary: List conversations
+      summary: Google Cloud Contact Center AI List conversations
       description: Lists conversations in a project and location.
       tags:
         - Conversations
@@ -55,7 +55,7 @@ paths:
                     type: string
     post:
       operationId: createConversation
-      summary: Create a conversation
+      summary: Google Cloud Contact Center AI Create a conversation
       description: Creates a new conversation resource.
       tags:
         - Conversations
@@ -86,7 +86,7 @@ paths:
   /projects/{projectId}/locations/{location}/conversations/{conversationId}:
     get:
       operationId: getConversation
-      summary: Get a conversation
+      summary: Google Cloud Contact Center AI Get a conversation
       description: Retrieves a specific conversation by ID.
       tags:
         - Conversations
@@ -115,7 +115,7 @@ paths:
                 $ref: '#/components/schemas/Conversation'
     patch:
       operationId: updateConversation
-      summary: Update a conversation
+      summary: Google Cloud Contact Center AI Update a conversation
       description: Updates a conversation resource.
       tags:
         - Conversations
@@ -150,7 +150,7 @@ paths:
                 $ref: '#/components/schemas/Conversation'
     delete:
       operationId: deleteConversation
-      summary: Delete a conversation
+      summary: Google Cloud Contact Center AI Delete a conversation
       description: Deletes a specific conversation.
       tags:
         - Conversations
@@ -176,7 +176,7 @@ paths:
   /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses:
     get:
       operationId: listAnalyses
-      summary: List analyses
+      summary: Google Cloud Contact Center AI List analyses
       description: Lists analyses for a conversation.
       tags:
         - Analyses
@@ -210,7 +210,7 @@ paths:
                       $ref: '#/components/schemas/Analysis'
     post:
       operationId: createAnalysis
-      summary: Create an analysis
+      summary: Google Cloud Contact Center AI Create an analysis
       description: Creates an analysis for a conversation.
       tags:
         - Analyses
@@ -246,7 +246,7 @@ paths:
   /projects/{projectId}/locations/{location}/insightsdata:export:
     post:
       operationId: exportInsightsData
-      summary: Export insights data
+      summary: Google Cloud Contact Center AI Export insights data
       description: Exports insights data to a destination.
       tags:
         - Insights
