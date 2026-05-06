@@ -1,0 +1,532 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Contact Center AI API
+  description: The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles,
+    participants, conversation analysis, and insights for virtual and human agent interactions.
+  tags:
+  - Google
+  - Cloud
+  - Contact
+  - Center
+  - Ai
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: google-cloud-contact-center-ai
+    baseUri: https://contactcenterinsights.googleapis.com/v1
+    description: Google Cloud Contact Center AI API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{GOOGLE_CLOUD_CONTACT_CENTER_AI_TOKEN}}'
+    resources:
+    - name: projects-projectid-locations-location-conversati
+      path: /projects/{projectId}/locations/{location}/conversations
+      operations:
+      - name: listconversations
+        method: GET
+        description: Google Cloud Contact Center AI List conversations
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: pageSize
+          in: query
+          type: integer
+        - name: pageToken
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconversation
+        method: POST
+        description: Google Cloud Contact Center AI Create a conversation
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: projects-projectid-locations-location-conversati
+      path: /projects/{projectId}/locations/{location}/conversations/{conversationId}
+      operations:
+      - name: getconversation
+        method: GET
+        description: Google Cloud Contact Center AI Get a conversation
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateconversation
+        method: PATCH
+        description: Google Cloud Contact Center AI Update a conversation
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteconversation
+        method: DELETE
+        description: Google Cloud Contact Center AI Delete a conversation
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: projects-projectid-locations-location-conversati
+      path: /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses
+      operations:
+      - name: listanalyses
+        method: GET
+        description: Google Cloud Contact Center AI List analyses
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createanalysis
+        method: POST
+        description: Google Cloud Contact Center AI Create an analysis
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: projects-projectid-locations-location-insightsda
+      path: /projects/{projectId}/locations/{location}/insightsdata:export
+      operations:
+      - name: exportinsightsdata
+        method: POST
+        description: Google Cloud Contact Center AI Export insights data
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: google-cloud-contact-center-ai-rest
+    description: REST adapter for Google Cloud Contact Center AI API.
+    resources:
+    - path: /projects/{projectId}/locations/{location}/conversations
+      name: listconversations
+      operations:
+      - method: GET
+        name: listconversations
+        description: Google Cloud Contact Center AI List conversations
+        call: google-cloud-contact-center-ai.listconversations
+        with:
+          projectId: rest.projectId
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations
+      name: createconversation
+      operations:
+      - method: POST
+        name: createconversation
+        description: Google Cloud Contact Center AI Create a conversation
+        call: google-cloud-contact-center-ai.createconversation
+        with:
+          projectId: rest.projectId
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations/{conversationId}
+      name: getconversation
+      operations:
+      - method: GET
+        name: getconversation
+        description: Google Cloud Contact Center AI Get a conversation
+        call: google-cloud-contact-center-ai.getconversation
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations/{conversationId}
+      name: updateconversation
+      operations:
+      - method: PATCH
+        name: updateconversation
+        description: Google Cloud Contact Center AI Update a conversation
+        call: google-cloud-contact-center-ai.updateconversation
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations/{conversationId}
+      name: deleteconversation
+      operations:
+      - method: DELETE
+        name: deleteconversation
+        description: Google Cloud Contact Center AI Delete a conversation
+        call: google-cloud-contact-center-ai.deleteconversation
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses
+      name: listanalyses
+      operations:
+      - method: GET
+        name: listanalyses
+        description: Google Cloud Contact Center AI List analyses
+        call: google-cloud-contact-center-ai.listanalyses
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses
+      name: createanalysis
+      operations:
+      - method: POST
+        name: createanalysis
+        description: Google Cloud Contact Center AI Create an analysis
+        call: google-cloud-contact-center-ai.createanalysis
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects/{projectId}/locations/{location}/insightsdata:export
+      name: exportinsightsdata
+      operations:
+      - method: POST
+        name: exportinsightsdata
+        description: Google Cloud Contact Center AI Export insights data
+        call: google-cloud-contact-center-ai.exportinsightsdata
+        with:
+          projectId: rest.projectId
+          location: rest.location
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: google-cloud-contact-center-ai-mcp
+    transport: http
+    description: MCP adapter for Google Cloud Contact Center AI API for AI agent use.
+    tools:
+    - name: listconversations
+      description: Google Cloud Contact Center AI List conversations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-contact-center-ai.listconversations
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        pageSize: tools.pageSize
+        pageToken: tools.pageToken
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: pageSize
+        type: integer
+        description: pageSize
+      - name: pageToken
+        type: string
+        description: pageToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconversation
+      description: Google Cloud Contact Center AI Create a conversation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-contact-center-ai.createconversation
+      with:
+        projectId: tools.projectId
+        location: tools.location
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconversation
+      description: Google Cloud Contact Center AI Get a conversation
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-contact-center-ai.getconversation
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: conversationId
+        type: string
+        description: conversationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateconversation
+      description: Google Cloud Contact Center AI Update a conversation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-contact-center-ai.updateconversation
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: conversationId
+        type: string
+        description: conversationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteconversation
+      description: Google Cloud Contact Center AI Delete a conversation
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: google-cloud-contact-center-ai.deleteconversation
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: conversationId
+        type: string
+        description: conversationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listanalyses
+      description: Google Cloud Contact Center AI List analyses
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-contact-center-ai.listanalyses
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: conversationId
+        type: string
+        description: conversationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createanalysis
+      description: Google Cloud Contact Center AI Create an analysis
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-contact-center-ai.createanalysis
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      - name: conversationId
+        type: string
+        description: conversationId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: exportinsightsdata
+      description: Google Cloud Contact Center AI Export insights data
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-contact-center-ai.exportinsightsdata
+      with:
+        projectId: tools.projectId
+        location: tools.location
+      inputParameters:
+      - name: projectId
+        type: string
+        description: projectId
+        required: true
+      - name: location
+        type: string
+        description: location
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_CONTACT_CENTER_AI_TOKEN: GOOGLE_CLOUD_CONTACT_CENTER_AI_TOKEN
