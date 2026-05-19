@@ -1,0 +1,144 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Contact Center AI API — Analyses
+  description: 'Google Cloud Contact Center AI API — Analyses. 2 operations. Lead operation: Google Cloud Contact Center AI
+    List analyses. Self-contained Naftiko capability covering one Google Cloud Contact Center Ai business surface.'
+  tags:
+  - Google Cloud Contact Center Ai
+  - Analyses
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY: GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-analyses
+    baseUri: https://contactcenterinsights.googleapis.com/v1
+    description: Google Cloud Contact Center AI API — Analyses business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-projectId-locations-location-conversations-conversationId-analyses
+      path: /projects/{projectId}/locations/{location}/conversations/{conversationId}/analyses
+      operations:
+      - name: listanalyses
+        method: GET
+        description: Google Cloud Contact Center AI List analyses
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+      - name: createanalysis
+        method: POST
+        description: Google Cloud Contact Center AI Create an analysis
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: conversationId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-analyses-rest
+    port: 8080
+    description: REST adapter for Google Cloud Contact Center AI API — Analyses. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/projects/{projectid}/locations/{location}/conversations/{conversationid}/analyses
+      name: projects-projectid-locations-location-conversations-conversationid-analyses
+      description: REST surface for projects-projectId-locations-location-conversations-conversationId-analyses.
+      operations:
+      - method: GET
+        name: listanalyses
+        description: Google Cloud Contact Center AI List analyses
+        call: openapi-analyses.listanalyses
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createanalysis
+        description: Google Cloud Contact Center AI Create an analysis
+        call: openapi-analyses.createanalysis
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          conversationId: rest.conversationId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-analyses-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Contact Center AI API — Analyses. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-contact-center-ai
+      description: Google Cloud Contact Center AI List analyses
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-analyses.listanalyses
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-contact-center-ai-2
+      description: Google Cloud Contact Center AI Create an analysis
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-analyses.createanalysis
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        conversationId: tools.conversationId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

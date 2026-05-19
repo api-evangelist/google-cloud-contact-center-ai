@@ -1,0 +1,92 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Contact Center AI API — Insights
+  description: 'Google Cloud Contact Center AI API — Insights. 1 operations. Lead operation: Google Cloud Contact Center AI
+    Export insights data. Self-contained Naftiko capability covering one Google Cloud Contact Center Ai business surface.'
+  tags:
+  - Google Cloud Contact Center Ai
+  - Insights
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY: GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-insights
+    baseUri: https://contactcenterinsights.googleapis.com/v1
+    description: Google Cloud Contact Center AI API — Insights business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-projectId-locations-location-insightsdata:export
+      path: /projects/{projectId}/locations/{location}/insightsdata:export
+      operations:
+      - name: exportinsightsdata
+        method: POST
+        description: Google Cloud Contact Center AI Export insights data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_CONTACT_CENTER_AI_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-insights-rest
+    port: 8080
+    description: REST adapter for Google Cloud Contact Center AI API — Insights. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/projects/{projectid}/locations/{location}/insightsdata-export
+      name: projects-projectid-locations-location-insightsdata-export
+      description: REST surface for projects-projectId-locations-location-insightsdata:export.
+      operations:
+      - method: POST
+        name: exportinsightsdata
+        description: Google Cloud Contact Center AI Export insights data
+        call: openapi-insights.exportinsightsdata
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-insights-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Contact Center AI API — Insights. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-contact-center-ai
+      description: Google Cloud Contact Center AI Export insights data
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-insights.exportinsightsdata
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
