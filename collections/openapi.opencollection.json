@@ -1,0 +1,269 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Contact Center AI API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Conversations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI List conversations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists conversations in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Create a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new conversation resource."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Get a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations/:conversationId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific conversation by ID."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Update a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations/:conversationId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a conversation resource."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Delete a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations/:conversationId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a specific conversation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Analyses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI List analyses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists analyses for a conversation."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Create an analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an analysis for a conversation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Insights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Contact Center AI Export insights data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contactcenterinsights.googleapis.com/v1/projects/:projectId/locations/:location/insightsdata:export",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Exports insights data to a destination."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
