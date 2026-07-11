@@ -43,6 +43,8 @@ apis:
       - type: JSONLDContext
         url: json-ld/context.jsonld
 common:
+  - type: OAuthScopes
+    url: scopes/google-cloud-contact-center-ai-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/GoogleCloudPlatform
   - type: Portal
