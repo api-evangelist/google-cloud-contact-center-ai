@@ -43,6 +43,12 @@ apis:
       - type: JSONLDContext
         url: json-ld/context.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-contact-center-ai-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-contact-center-ai-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-contact-center-ai-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-contact-center-ai-scopes.yml
   - type: GitHubOrganization
