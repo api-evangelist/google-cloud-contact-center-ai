@@ -4,7 +4,20 @@ description: >-
   Google Cloud Contact Center AI (CCAI) provides AI-powered solutions for contact centers, enabling virtual agents,
   agent assist capabilities, and insights from customer conversations. It combines Dialogflow, speech-to-text,
   text-to-speech, and natural language processing to improve customer service.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-contact-center-ai.png
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-contact-center-ai/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -18,31 +31,70 @@ tags:
   - Google Cloud
   - Virtual Agents
 apis:
-  - name: Google Cloud Contact Center AI API
-    description: >-
-      The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles,
-      participants, and conversation analysis for virtual and human agent interactions.
-    humanURL: https://cloud.google.com/contact-center/ai
-    baseURL: https://contactcenterai.googleapis.com
-    tags:
-      - AI
-      - Contact Center
-      - Conversations
-      - Virtual Agents
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/contact-center/ai/docs
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/docs/authentication
-      - type: GettingStarted
-        url: https://cloud.google.com/contact-center/ai/docs
-      - type: JSONSchema
-        url: json-schema/conversation.json
-      - type: JSONLDContext
-        url: json-ld/context.jsonld
+- aid: google-cloud-contact-center-ai:google-cloud-contact-center-ai-analyses-api
+  name: Google Cloud Contact Center AI Analyses API
+  description: The Analyses API from Google Cloud Contact Center AI — 1 operation(s) for analyses.
+  humanURL: https://cloud.google.com/contact-center/ai
+  baseURL: https://contactcenterai.googleapis.com
+  tags:
+  - Analyses
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-contact-center-ai-analyses-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: JSONSchema
+    url: json-schema/conversation.json
+  - type: JSONLDContext
+    url: json-ld/context.jsonld
+- aid: google-cloud-contact-center-ai:google-cloud-contact-center-ai-conversations-api
+  name: Google Cloud Contact Center AI Conversations API
+  description: >-
+    The Conversations API from Google Cloud Contact Center AI — 2 operation(s) for conversations.
+  humanURL: https://cloud.google.com/contact-center/ai
+  baseURL: https://contactcenterai.googleapis.com
+  tags:
+  - Conversations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-contact-center-ai-conversations-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: JSONSchema
+    url: json-schema/conversation.json
+  - type: JSONLDContext
+    url: json-ld/context.jsonld
+- aid: google-cloud-contact-center-ai:google-cloud-contact-center-ai-insights-api
+  name: Google Cloud Contact Center AI Insights API
+  description: The Insights API from Google Cloud Contact Center AI — 1 operation(s) for insights.
+  humanURL: https://cloud.google.com/contact-center/ai
+  baseURL: https://contactcenterai.googleapis.com
+  tags:
+  - Insights
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-contact-center-ai-insights-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/contact-center/ai/docs
+  - type: JSONSchema
+    url: json-schema/conversation.json
+  - type: JSONLDContext
+    url: json-ld/context.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-contact-center-ai/overview
   - type: AgenticAccess
     url: agentic-access/google-cloud-contact-center-ai-agentic-access.yml
   - type: VulnerabilityDisclosure
