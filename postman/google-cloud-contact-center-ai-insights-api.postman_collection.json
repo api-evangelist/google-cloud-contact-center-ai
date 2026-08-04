@@ -1,0 +1,191 @@
+{
+  "info": {
+    "_postman_id": "4b3f647b-0523-44ea-8c77-224d4c1ba29a",
+    "name": "Google Cloud Contact Center AI Analyses Insights API",
+    "description": "The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, conversation analysis, and insights for virtual and human agent interactions.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:46:51.000Z",
+    "updatedAt": "2026-07-28T01:46:52.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-4b3f647b-0523-44ea-8c77-224d4c1ba29a"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "insightsdata:export",
+                      "item": [
+                        {
+                          "name": "Google Cloud Contact Center AI Export insights data",
+                          "id": "9c94f995-a2e0-4c5b-a448-fbce8e07a814",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"bigQueryDestination\": {\n    \"dataset\": \"<string>\",\n    \"projectId\": \"<string>\",\n    \"table\": \"<string>\"\n  },\n  \"filter\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/insightsdata:export",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "insightsdata:export"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "bece3e9a-cf2c-450f-85b7-1660f90148ab",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "a9522ae9-9da8-4e68-900a-f94b0d66e057",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Exports insights data to a destination."
+                          },
+                          "response": [
+                            {
+                              "id": "cb46f886-5be9-49a1-b757-78a879909c5e",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"bigQueryDestination\": {\n    \"dataset\": \"<string>\",\n    \"projectId\": \"<string>\",\n    \"table\": \"<string>\"\n  },\n  \"filter\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/insightsdata:export",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "insightsdata:export"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  }\n}",
+                              "createdAt": "2026-07-28T01:46:52.000Z",
+                              "updatedAt": "2026-07-28T01:46:52.000Z",
+                              "uid": "35240-cb46f886-5be9-49a1-b757-78a879909c5e"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:46:52.000Z",
+                          "updatedAt": "2026-07-28T01:46:52.000Z",
+                          "uid": "35240-9c94f995-a2e0-4c5b-a448-fbce8e07a814"
+                        }
+                      ],
+                      "id": "b0903225-9cbb-4cd7-900e-696b377c3359",
+                      "createdAt": "2026-07-28T01:46:52.000Z",
+                      "updatedAt": "2026-07-28T01:46:52.000Z",
+                      "uid": "35240-b0903225-9cbb-4cd7-900e-696b377c3359"
+                    }
+                  ],
+                  "id": "8fed8f50-15ee-48a1-8b24-ba9c4195e259",
+                  "createdAt": "2026-07-28T01:46:52.000Z",
+                  "updatedAt": "2026-07-28T01:46:52.000Z",
+                  "uid": "35240-8fed8f50-15ee-48a1-8b24-ba9c4195e259"
+                }
+              ],
+              "id": "4a536585-27fd-4052-93c3-c72c78d95ed3",
+              "createdAt": "2026-07-28T01:46:52.000Z",
+              "updatedAt": "2026-07-28T01:46:52.000Z",
+              "uid": "35240-4a536585-27fd-4052-93c3-c72c78d95ed3"
+            }
+          ],
+          "id": "44031a83-6263-4ec2-b5c9-7cdc500dd3ca",
+          "createdAt": "2026-07-28T01:46:52.000Z",
+          "updatedAt": "2026-07-28T01:46:52.000Z",
+          "uid": "35240-44031a83-6263-4ec2-b5c9-7cdc500dd3ca"
+        }
+      ],
+      "id": "543bda89-0da5-4298-9c3f-d5d9beb0aa11",
+      "createdAt": "2026-07-28T01:46:52.000Z",
+      "updatedAt": "2026-07-28T01:46:52.000Z",
+      "uid": "35240-543bda89-0da5-4298-9c3f-d5d9beb0aa11"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://contactcenterinsights.googleapis.com/v1"
+    }
+  ]
+}

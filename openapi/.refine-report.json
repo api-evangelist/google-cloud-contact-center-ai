@@ -1,0 +1,18 @@
+{
+  "provider": "google-cloud-contact-center-ai",
+  "sources": [
+    "google-cloud-contact-center-ai-analyses-api-openapi.yml",
+    "google-cloud-contact-center-ai-conversations-api-openapi.yml",
+    "google-cloud-contact-center-ai-insights-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-contact-center-ai-analyses-api-openapi.yml",
+    "google-cloud-contact-center-ai-conversations-api-openapi.yml",
+    "google-cloud-contact-center-ai-insights-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

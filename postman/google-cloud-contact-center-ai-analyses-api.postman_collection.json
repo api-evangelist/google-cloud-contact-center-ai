@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "1501a75d-d87b-40b0-b2f0-525d6e30c551",
+    "name": "Google Cloud Contact Center AI Analyses API",
+    "description": "The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, conversation analysis, and insights for virtual and human agent interactions.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:46:50.000Z",
+    "updatedAt": "2026-07-28T01:46:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1501a75d-d87b-40b0-b2f0-525d6e30c551"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "conversations",
+                      "item": [
+                        {
+                          "name": "{conversationId}",
+                          "item": [
+                            {
+                              "name": "analyses",
+                              "item": [
+                                {
+                                  "name": "Google Cloud Contact Center AI List analyses",
+                                  "id": "1436fe68-cf00-4912-bdf3-e5e8d52a8191",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "conversations",
+                                        ":conversationId",
+                                        "analyses"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "ff103217-6384-4a21-a670-ee0f135e583b",
+                                          "key": "projectId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "025d6de0-1295-477d-bd55-6958cc25e024",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "bc66982f-7de0-468a-9744-87a2fe01e5ca",
+                                          "key": "conversationId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Lists analyses for a conversation."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "2e8d0c04-d72d-4da0-aed8-7410bfab032c",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "projects",
+                                            ":projectId",
+                                            "locations",
+                                            ":location",
+                                            "conversations",
+                                            ":conversationId",
+                                            "analyses"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "projectId"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "conversationId"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"analyses\": [\n    {\n      \"name\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"analysisResult\": {\n        \"callAnalysisMetadata\": {\n          \"sentiments\": [\n            {\n              \"magnitude\": \"<number>\",\n              \"score\": \"<number>\"\n            },\n            {\n              \"magnitude\": \"<number>\",\n              \"score\": \"<number>\"\n            }\n          ],\n          \"entities\": {\n            \"dolor791\": {}\n          },\n          \"intents\": {\n            \"enim_dd5\": {},\n            \"anim3f\": {},\n            \"laborum30_\": {},\n            \"nullaa01\": {}\n          }\n        }\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"analysisResult\": {\n        \"callAnalysisMetadata\": {\n          \"sentiments\": [\n            {\n              \"magnitude\": \"<number>\",\n              \"score\": \"<number>\"\n            },\n            {\n              \"magnitude\": \"<number>\",\n              \"score\": \"<number>\"\n            }\n          ],\n          \"entities\": {\n            \"sit_8\": {},\n            \"ullamco_9\": {}\n          },\n          \"intents\": {\n            \"nisi81d\": {}\n          }\n        }\n      }\n    }\n  ]\n}",
+                                      "createdAt": "2026-07-28T01:46:50.000Z",
+                                      "updatedAt": "2026-07-28T01:46:50.000Z",
+                                      "uid": "35240-2e8d0c04-d72d-4da0-aed8-7410bfab032c"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:46:50.000Z",
+                                  "updatedAt": "2026-07-28T01:46:50.000Z",
+                                  "uid": "35240-1436fe68-cf00-4912-bdf3-e5e8d52a8191"
+                                },
+                                {
+                                  "name": "Google Cloud Contact Center AI Create an analysis",
+                                  "id": "9862325e-546b-4db1-a799-50e5a61690ed",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"analysisResult\": {\n    \"callAnalysisMetadata\": {\n      \"sentiments\": [\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        },\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        }\n      ],\n      \"entities\": {\n        \"ad50\": {}\n      },\n      \"intents\": {\n        \"esse8\": {},\n        \"laboref_\": {},\n        \"incididuntf60\": {},\n        \"nulla02\": {},\n        \"idc\": {}\n      }\n    }\n  }\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "conversations",
+                                        ":conversationId",
+                                        "analyses"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "ffa99304-7747-4fd0-ac0a-5a4ebfcc10ac",
+                                          "key": "projectId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "97669b81-862b-4fb7-83c2-2683b6a93131",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "7fa49e3f-0b36-4e12-a10b-9b6ea87662f0",
+                                          "key": "conversationId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Creates an analysis for a conversation."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "2e342e95-29ce-436d-82f5-6d41b31130b0",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "POST",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"name\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"analysisResult\": {\n    \"callAnalysisMetadata\": {\n      \"sentiments\": [\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        },\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        }\n      ],\n      \"entities\": {\n        \"ad50\": {}\n      },\n      \"intents\": {\n        \"esse8\": {},\n        \"laboref_\": {},\n        \"incididuntf60\": {},\n        \"nulla02\": {},\n        \"idc\": {}\n      }\n    }\n  }\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId/analyses",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "projects",
+                                            ":projectId",
+                                            "locations",
+                                            ":location",
+                                            "conversations",
+                                            ":conversationId",
+                                            "analyses"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "projectId"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "conversationId"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"metadata\": {},\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  }\n}",
+                                      "createdAt": "2026-07-28T01:46:50.000Z",
+                                      "updatedAt": "2026-07-28T01:46:50.000Z",
+                                      "uid": "35240-2e342e95-29ce-436d-82f5-6d41b31130b0"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:46:50.000Z",
+                                  "updatedAt": "2026-07-28T01:46:50.000Z",
+                                  "uid": "35240-9862325e-546b-4db1-a799-50e5a61690ed"
+                                }
+                              ],
+                              "id": "d10b5331-0082-4252-8ced-c376746ea15e",
+                              "createdAt": "2026-07-28T01:46:50.000Z",
+                              "updatedAt": "2026-07-28T01:46:50.000Z",
+                              "uid": "35240-d10b5331-0082-4252-8ced-c376746ea15e"
+                            }
+                          ],
+                          "id": "6a2d1d4a-14cb-4449-b040-5d217133243e",
+                          "createdAt": "2026-07-28T01:46:50.000Z",
+                          "updatedAt": "2026-07-28T01:46:50.000Z",
+                          "uid": "35240-6a2d1d4a-14cb-4449-b040-5d217133243e"
+                        }
+                      ],
+                      "id": "e5403cbe-ae7d-4604-ac15-e0a8b42528e4",
+                      "createdAt": "2026-07-28T01:46:50.000Z",
+                      "updatedAt": "2026-07-28T01:46:50.000Z",
+                      "uid": "35240-e5403cbe-ae7d-4604-ac15-e0a8b42528e4"
+                    }
+                  ],
+                  "id": "d44607c5-fa83-49ca-8f68-df8d574bc3e1",
+                  "createdAt": "2026-07-28T01:46:50.000Z",
+                  "updatedAt": "2026-07-28T01:46:50.000Z",
+                  "uid": "35240-d44607c5-fa83-49ca-8f68-df8d574bc3e1"
+                }
+              ],
+              "id": "7d32fe62-89af-46c1-959c-1d71e0f598cb",
+              "createdAt": "2026-07-28T01:46:50.000Z",
+              "updatedAt": "2026-07-28T01:46:50.000Z",
+              "uid": "35240-7d32fe62-89af-46c1-959c-1d71e0f598cb"
+            }
+          ],
+          "id": "8b3f4405-57bc-473c-bfd2-ac3b65831ca8",
+          "createdAt": "2026-07-28T01:46:50.000Z",
+          "updatedAt": "2026-07-28T01:46:50.000Z",
+          "uid": "35240-8b3f4405-57bc-473c-bfd2-ac3b65831ca8"
+        }
+      ],
+      "id": "9d5f6047-ef13-495b-bb6a-202b56622c26",
+      "createdAt": "2026-07-28T01:46:50.000Z",
+      "updatedAt": "2026-07-28T01:46:50.000Z",
+      "uid": "35240-9d5f6047-ef13-495b-bb6a-202b56622c26"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://contactcenterinsights.googleapis.com/v1"
+    }
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "info": {
+    "_postman_id": "443eaa94-f1a0-4b9b-beee-08a87df06b76",
+    "name": "Google Cloud Contact Center AI Analyses Conversations API",
+    "description": "The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, conversation analysis, and insights for virtual and human agent interactions.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:46:51.000Z",
+    "updatedAt": "2026-07-28T01:46:51.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-443eaa94-f1a0-4b9b-beee-08a87df06b76"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "conversations",
+                      "item": [
+                        {
+                          "name": "{conversationId}",
+                          "item": [
+                            {
+                              "name": "Google Cloud Contact Center AI Get a conversation",
+                              "id": "bd057fc3-2cf5-4df3-8c5f-b63b22f3b0df",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "conversations",
+                                    ":conversationId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "75d176eb-56d9-4fda-a762-0cac481e7b79",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "62cc2cb6-0019-403f-840b-07eb3557cd35",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "e9ab40d3-09fa-48d7-aef3-fd2a873700b4",
+                                      "key": "conversationId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Retrieves a specific conversation by ID."
+                              },
+                              "response": [
+                                {
+                                  "id": "a27623d3-6104-4462-a357-ca53281857bd",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "conversations",
+                                        ":conversationId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "conversationId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                                  "createdAt": "2026-07-28T01:46:51.000Z",
+                                  "updatedAt": "2026-07-28T01:46:51.000Z",
+                                  "uid": "35240-a27623d3-6104-4462-a357-ca53281857bd"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:51.000Z",
+                              "updatedAt": "2026-07-28T01:46:51.000Z",
+                              "uid": "35240-bd057fc3-2cf5-4df3-8c5f-b63b22f3b0df"
+                            },
+                            {
+                              "name": "Google Cloud Contact Center AI Update a conversation",
+                              "id": "f066d7d4-aca5-4276-b54d-b684eba38c44",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "PATCH",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "conversations",
+                                    ":conversationId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "d6440902-9c85-4e61-9181-3ee565583e7d",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "cb5dab98-c7bb-4aa5-9a74-bff72c166d02",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "3e1de4ad-9b32-4807-b5a7-1f002805e6ce",
+                                      "key": "conversationId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Updates a conversation resource."
+                              },
+                              "response": [
+                                {
+                                  "id": "1f4c1eb3-c49b-4cc0-b719-8c50815c5d76",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "PATCH",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "conversations",
+                                        ":conversationId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "conversationId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                                  "createdAt": "2026-07-28T01:46:51.000Z",
+                                  "updatedAt": "2026-07-28T01:46:51.000Z",
+                                  "uid": "35240-1f4c1eb3-c49b-4cc0-b719-8c50815c5d76"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:51.000Z",
+                              "updatedAt": "2026-07-28T01:46:51.000Z",
+                              "uid": "35240-f066d7d4-aca5-4276-b54d-b684eba38c44"
+                            },
+                            {
+                              "name": "Google Cloud Contact Center AI Delete a conversation",
+                              "id": "3b8a427c-3590-4869-b506-756d43859018",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "conversations",
+                                    ":conversationId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "8aa8da40-fad7-4fcd-83d1-8bd91eddb16f",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "585c7c07-cf44-4760-ac19-6f53fa100e9e",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "0f5c200b-11dd-4d99-86bb-0d5b5b6976d1",
+                                      "key": "conversationId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Deletes a specific conversation."
+                              },
+                              "response": [
+                                {
+                                  "id": "9b290b94-d401-4b0e-a5a2-e7ceb7b06805",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "DELETE",
+                                    "header": [],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations/:conversationId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "conversations",
+                                        ":conversationId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "conversationId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T01:46:51.000Z",
+                                  "updatedAt": "2026-07-28T01:46:51.000Z",
+                                  "uid": "35240-9b290b94-d401-4b0e-a5a2-e7ceb7b06805"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:51.000Z",
+                              "updatedAt": "2026-07-28T01:46:51.000Z",
+                              "uid": "35240-3b8a427c-3590-4869-b506-756d43859018"
+                            }
+                          ],
+                          "id": "94f8c121-bc95-46b7-97fc-917e84529ead",
+                          "createdAt": "2026-07-28T01:46:51.000Z",
+                          "updatedAt": "2026-07-28T01:46:51.000Z",
+                          "uid": "35240-94f8c121-bc95-46b7-97fc-917e84529ead"
+                        },
+                        {
+                          "name": "Google Cloud Contact Center AI List conversations",
+                          "id": "bac6a39b-1f6e-4591-8c40-64878760585e",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations?pageSize=<integer>&pageToken=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "conversations"
+                              ],
+                              "query": [
+                                {
+                                  "key": "pageSize",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "pageToken",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "6cf36f39-3e3e-4933-b1d0-224dbe289e94",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "e77dad86-08c5-4ee3-98bc-b3bad864994d",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Lists conversations in a project and location."
+                          },
+                          "response": [
+                            {
+                              "id": "5e414f7a-bf0f-4577-b098-6108d4178ba1",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations?pageSize=<integer>&pageToken=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "conversations"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "pageSize",
+                                      "value": "<integer>"
+                                    },
+                                    {
+                                      "key": "pageToken",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"conversations\": [\n    {\n      \"name\": \"<string>\",\n      \"dataSource\": {\n        \"gcsSource\": {\n          \"audioUri\": \"<string>\",\n          \"transcriptUri\": \"<string>\"\n        },\n        \"dialogflowSource\": {\n          \"dialogflowConversation\": \"<string>\"\n        }\n      },\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"startTime\": \"<dateTime>\",\n      \"duration\": \"<string>\",\n      \"turnCount\": \"<integer>\",\n      \"agentId\": \"<string>\",\n      \"languageCode\": \"<string>\",\n      \"labels\": {\n        \"exercitation_57\": \"<string>\",\n        \"commodo07\": \"<string>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"dataSource\": {\n        \"gcsSource\": {\n          \"audioUri\": \"<string>\",\n          \"transcriptUri\": \"<string>\"\n        },\n        \"dialogflowSource\": {\n          \"dialogflowConversation\": \"<string>\"\n        }\n      },\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"startTime\": \"<dateTime>\",\n      \"duration\": \"<string>\",\n      \"turnCount\": \"<integer>\",\n      \"agentId\": \"<string>\",\n      \"languageCode\": \"<string>\",\n      \"labels\": {\n        \"laboris19\": \"<string>\",\n        \"sunt3\": \"<string>\",\n        \"Lorem5\": \"<string>\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                              "createdAt": "2026-07-28T01:46:51.000Z",
+                              "updatedAt": "2026-07-28T01:46:51.000Z",
+                              "uid": "35240-5e414f7a-bf0f-4577-b098-6108d4178ba1"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:46:51.000Z",
+                          "updatedAt": "2026-07-28T01:46:51.000Z",
+                          "uid": "35240-bac6a39b-1f6e-4591-8c40-64878760585e"
+                        },
+                        {
+                          "name": "Google Cloud Contact Center AI Create a conversation",
+                          "id": "6bbb7d95-1344-425c-8614-676252ab3485",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "conversations"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "ad050ee6-9638-41e9-8502-026ef04bb147",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "459b3800-3769-44cd-908f-2c52ac6f4b98",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Creates a new conversation resource."
+                          },
+                          "response": [
+                            {
+                              "id": "f2a12465-8212-4369-a542-f5e693b173b7",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/conversations",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "conversations"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"name\": \"<string>\",\n  \"dataSource\": {\n    \"gcsSource\": {\n      \"audioUri\": \"<string>\",\n      \"transcriptUri\": \"<string>\"\n    },\n    \"dialogflowSource\": {\n      \"dialogflowConversation\": \"<string>\"\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"startTime\": \"<dateTime>\",\n  \"duration\": \"<string>\",\n  \"turnCount\": \"<integer>\",\n  \"agentId\": \"<string>\",\n  \"languageCode\": \"<string>\",\n  \"labels\": {\n    \"adipisicing_97d\": \"<string>\",\n    \"culpae\": \"<string>\"\n  }\n}",
+                              "createdAt": "2026-07-28T01:46:51.000Z",
+                              "updatedAt": "2026-07-28T01:46:51.000Z",
+                              "uid": "35240-f2a12465-8212-4369-a542-f5e693b173b7"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:46:51.000Z",
+                          "updatedAt": "2026-07-28T01:46:51.000Z",
+                          "uid": "35240-6bbb7d95-1344-425c-8614-676252ab3485"
+                        }
+                      ],
+                      "id": "1c2b20d2-91fc-4714-ab04-789dfaf99cfa",
+                      "createdAt": "2026-07-28T01:46:51.000Z",
+                      "updatedAt": "2026-07-28T01:46:51.000Z",
+                      "uid": "35240-1c2b20d2-91fc-4714-ab04-789dfaf99cfa"
+                    }
+                  ],
+                  "id": "24a7274a-7f71-4956-a210-a26a6dcd9a7c",
+                  "createdAt": "2026-07-28T01:46:51.000Z",
+                  "updatedAt": "2026-07-28T01:46:51.000Z",
+                  "uid": "35240-24a7274a-7f71-4956-a210-a26a6dcd9a7c"
+                }
+              ],
+              "id": "55419e32-9780-4fcb-8689-465eae056c87",
+              "createdAt": "2026-07-28T01:46:51.000Z",
+              "updatedAt": "2026-07-28T01:46:51.000Z",
+              "uid": "35240-55419e32-9780-4fcb-8689-465eae056c87"
+            }
+          ],
+          "id": "9d72d4f7-eef9-4f15-8753-20f36b16285b",
+          "createdAt": "2026-07-28T01:46:51.000Z",
+          "updatedAt": "2026-07-28T01:46:51.000Z",
+          "uid": "35240-9d72d4f7-eef9-4f15-8753-20f36b16285b"
+        }
+      ],
+      "id": "c2a21073-9985-4587-a713-1ec160db7d9a",
+      "createdAt": "2026-07-28T01:46:51.000Z",
+      "updatedAt": "2026-07-28T01:46:51.000Z",
+      "uid": "35240-c2a21073-9985-4587-a713-1ec160db7d9a"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://contactcenterinsights.googleapis.com/v1"
+    }
+  ]
+}
