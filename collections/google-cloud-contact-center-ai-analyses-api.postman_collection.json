@@ -1,0 +1,305 @@
+{
+  "item": [
+    {
+      "id": "965b7111-1aca-44f3-bd13-2a37f7815d2e",
+      "name": "Analyses",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07c625cf-98cc-46cc-a288-1dcec1c5b6db",
+          "name": "Google Cloud Contact Center AI List analyses",
+          "request": {
+            "name": "Google Cloud Contact Center AI List analyses",
+            "description": {
+              "content": "Lists analyses for a conversation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "locations",
+                ":location",
+                "conversations",
+                ":conversationId",
+                "analyses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "location",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "conversationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b5c4d98e-d4a0-4dcf-ba42-748e6d73acdc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "locations",
+                    ":location",
+                    "conversations",
+                    ":conversationId",
+                    "analyses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "location",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "conversationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"analyses\": [\n    {\n      \"name\": \"string\",\n      \"createTime\": \"1951-11-23T02:01:44.442Z\",\n      \"analysisResult\": {\n        \"callAnalysisMetadata\": {\n          \"sentiments\": [\n            {\n              \"magnitude\": 4378.378772554232,\n              \"score\": 7519.8737296264935\n            },\n            {\n              \"magnitude\": 4070.113370585541,\n              \"score\": 2998.457683334905\n            }\n          ],\n          \"entities\": {\n            \"key_0\": {}\n          },\n          \"intents\": {\n            \"key_0\": {}\n          }\n        }\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"createTime\": \"2018-05-02T09:25:09.610Z\",\n      \"analysisResult\": {\n        \"callAnalysisMetadata\": {\n          \"sentiments\": [\n            {\n              \"magnitude\": 1867.1736172235808,\n              \"score\": 6063.197852659597\n            },\n            {\n              \"magnitude\": 3922.116244681072,\n              \"score\": 3856.421036342419\n            }\n          ],\n          \"entities\": {\n            \"key_0\": {}\n          },\n          \"intents\": {\n            \"key_0\": {},\n            \"key_1\": {}\n          }\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5b72dd05-8d46-4023-a418-4eb8e38c4a12",
+          "name": "Google Cloud Contact Center AI Create an analysis",
+          "request": {
+            "name": "Google Cloud Contact Center AI Create an analysis",
+            "description": {
+              "content": "Creates an analysis for a conversation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "locations",
+                ":location",
+                "conversations",
+                ":conversationId",
+                "analyses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "location",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "conversationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"analysisResult\": {\n    \"callAnalysisMetadata\": {\n      \"sentiments\": [\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        },\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        }\n      ],\n      \"entities\": {\n        \"key_0\": \"<object>\",\n        \"key_1\": \"<object>\"\n      },\n      \"intents\": {\n        \"key_0\": \"<object>\",\n        \"key_1\": \"<object>\"\n      }\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e48a43ff-1400-42d1-8c12-f81f7a83280d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "locations",
+                    ":location",
+                    "conversations",
+                    ":conversationId",
+                    "analyses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "location",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "conversationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"analysisResult\": {\n    \"callAnalysisMetadata\": {\n      \"sentiments\": [\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        },\n        {\n          \"magnitude\": \"<number>\",\n          \"score\": \"<number>\"\n        }\n      ],\n      \"entities\": {\n        \"key_0\": \"<object>\",\n        \"key_1\": \"<object>\"\n      },\n      \"intents\": {\n        \"key_0\": \"<object>\"\n      }\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"done\": true,\n  \"metadata\": {},\n  \"error\": {\n    \"code\": 9698,\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://contactcenterinsights.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a78c162c-f662-47e5-974a-8df1042fcc90",
+    "name": "Google Cloud Contact Center AI Analyses API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, conversation analysis, and insights for virtual and human agent interactions.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}
