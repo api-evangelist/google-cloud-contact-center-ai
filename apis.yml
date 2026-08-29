@@ -4,6 +4,18 @@ description: >-
   Google Cloud Contact Center AI (CCAI) provides AI-powered solutions for contact centers, enabling virtual agents,
   agent assist capabilities, and insights from customer conversations. It combines Dialogflow, speech-to-text,
   text-to-speech, and natural language processing to improve customer service.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
