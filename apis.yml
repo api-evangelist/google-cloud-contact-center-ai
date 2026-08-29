@@ -112,6 +112,9 @@ apis:
   - type: JSONLDContext
     url: json-ld/context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/google-cloud-contact-center-ai-capability-edges.yml
+    name: Google Cloud Contact Center AI Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/google-cloud-contact-center-ai/overview
   - type: AgenticAccess
