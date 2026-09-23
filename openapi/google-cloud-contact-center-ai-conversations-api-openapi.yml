@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Contact Center AI Analyses Conversations API
+  title: Google Cloud Contact Center AI Conversations API
   description: The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, conversation analysis, and insights for virtual and human agent interactions.
   version: 2.0.0
   contact:
