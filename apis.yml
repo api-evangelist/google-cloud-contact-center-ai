@@ -112,6 +112,12 @@ apis:
   - type: JSONLDContext
     url: json-ld/context.jsonld
 common:
+  - type: Plans
+    url: plans/google-cloud-contact-center-ai-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/google-cloud-contact-center-ai-rate-limits.yml
+  - type: FinOps
+    url: finops/google-cloud-contact-center-ai-finops.yml
   - type: Website
     url: https://www.google.com/
   - type: CapabilityMap
