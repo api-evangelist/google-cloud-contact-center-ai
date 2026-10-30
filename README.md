@@ -1,4 +1,4 @@
-# Google Cloud Contact Center AI (google-cloud-contact-center-ai)
+# Google Cloud Contact Center AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,153 @@
 
 Google Cloud Contact Center AI (CCAI) provides AI-powered solutions for contact centers, enabling virtual agents, agent assist capabilities, and insights from customer conversations. It combines Dialogflow, speech-to-text, text-to-speech, and natural language processing to improve customer service.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-contact-center-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-contact-center-ai/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Contact Center · Conversations · Customer Service · Google Cloud · Virtual Agents
 
-## Scope
+## Google Cloud Contact Center AI on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Contact Center AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-contact-center-ai/](https://apis.io/providers/google-cloud-contact-center-ai/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- AI
-- Contact Center
-- Conversations
-- Customer Service
-- Google Cloud
-- Virtual Agents
+- [Google Cloud Contact Center AI Analyses API](https://apis.io/apis/google-cloud-contact-center-ai/google-cloud-contact-center-ai-analyses-api/) — The Analyses API from Google Cloud Contact Center AI — 1 operation(s) for analyses.
+- [Google Cloud Contact Center AI Conversations API](https://apis.io/apis/google-cloud-contact-center-ai/google-cloud-contact-center-ai-conversations-api/) — The Conversations API from Google Cloud Contact Center AI — 2 operation(s) for conversations.
+- [Google Cloud Contact Center AI Insights API](https://apis.io/apis/google-cloud-contact-center-ai/google-cloud-contact-center-ai-insights-api/) — The Insights API from Google Cloud Contact Center AI — 1 operation(s) for insights.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud Contact Center AI API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Contact Center AI API enables building AI-powered contact center solutions with conversation profiles, participants, and conversation analysis for virtual and human agent interactions.
+- [Google Cloud Contact Center Ai Agentic Access](https://apis.io/agentic-access/google-cloud-contact-center-ai/google-cloud-contact-center-ai-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/contact-center/ai](https://cloud.google.com/contact-center/ai)
-- **Base URL:** `https://contactcenterai.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- AI
-- Contact Center
-- Conversations
-- Virtual Agents
+- [Conversation](https://apis.io/schemas/google-cloud-contact-center-ai/conversation/)
 
-#### Properties
+#### JSON-LD (1)
 
+Linked-data contexts for the provider's vocabulary.
+
+- [context Context](https://apis.io/jsonld/google-cloud-contact-center-ai/context/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Google Cloud Contact Center AI Analyses API](https://apis.io/collections/google-cloud-contact-center-ai/open-google-cloud-contact-center-ai-analyses-api/)
+- [Google Cloud Contact Center AI Analyses Conversations API](https://apis.io/collections/google-cloud-contact-center-ai/open-google-cloud-contact-center-ai-conversations-api/)
+- [Google Cloud Contact Center AI Analyses Insights API](https://apis.io/collections/google-cloud-contact-center-ai/open-google-cloud-contact-center-ai-insights-api/)
+- [Google Cloud Contact Center AI API](https://apis.io/collections/google-cloud-contact-center-ai/open-openapi/)
+- [Google Cloud Contact Center AI Analyses API](https://apis.io/collections/google-cloud-contact-center-ai/postman-google-cloud-contact-center-ai-analyses-api/)
+- [Google Cloud Contact Center AI Analyses Conversations API](https://apis.io/collections/google-cloud-contact-center-ai/postman-google-cloud-contact-center-ai-conversations-api/)
+- [Google Cloud Contact Center AI Analyses Insights API](https://apis.io/collections/google-cloud-contact-center-ai/postman-google-cloud-contact-center-ai-insights-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Cloud Contact Center AI — jsonschema rules](https://apis.io/rules/google-cloud-contact-center-ai/google-cloud-contact-center-ai-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud Contact Center Ai Authentication](https://apis.io/security/google-cloud-contact-center-ai/google-cloud-contact-center-ai-authentication/)
+- [Google Cloud Contact Center Ai Domain Security](https://apis.io/security/google-cloud-contact-center-ai/google-cloud-contact-center-ai-domain-security/)
+- [Google Cloud Contact Center Ai Vulnerability Disclosure](https://apis.io/security/google-cloud-contact-center-ai/google-cloud-contact-center-ai-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Cloud Contact Center Ai Scopes](https://apis.io/scopes/google-cloud-contact-center-ai/google-cloud-contact-center-ai-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud Contact Center Ai Plans Pricing](https://apis.io/plans/google-cloud-contact-center-ai/google-cloud-contact-center-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud Contact Center Ai Rate Limits](https://apis.io/rate-limits/google-cloud-contact-center-ai/google-cloud-contact-center-ai-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud Contact Center Ai Finops](https://apis.io/finops/google-cloud-contact-center-ai/google-cloud-contact-center-ai-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/contact-center/ai/docs)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/docs/authentication)
-- [Getting Started](https://cloud.google.com/contact-center/ai/docs)
-- [JSON Schema](json-schema/conversation.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](json-ld/context.jsonld)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/GoogleCloudPlatform)
-- [Portal](https://cloud.google.com/contact-center/ai)
-- [Getting Started](https://cloud.google.com/contact-center/ai/docs)
-- [Documentation](https://cloud.google.com/contact-center/ai/docs)
-- [Authentication](https://cloud.google.com/docs/authentication)
+- [Getting started](https://cloud.google.com/contact-center/ai/docs)
 - [Pricing](https://cloud.google.com/contact-center/ai/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/contact-center/ai/support)
-- [J S O N L D Context](json-ld/context.jsonld)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/GoogleCloudPlatform)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 37.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 54.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 22.6 |
+| Access clarity | 28.9 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 37.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-contact-center-ai/](https://apis.io/providers/google-cloud-contact-center-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Contact Center AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-contact-center-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
